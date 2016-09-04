@@ -13,7 +13,7 @@ export function fetchWeather(city) {
 
     return {
         type: 'FETCH_WEATHER',
-        payload: 'data'
+        payload: data
     }
 }
 
