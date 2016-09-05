@@ -7,10 +7,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+        <div>
         <SearchBar/>
         <WeatherList/>
-      </div>
+        </div>
     );
   }
 }

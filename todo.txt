@@ -1,0 +1,23 @@
+1. remove constants from actions
+
+2. convert celcius to farenheight
+
+3. maybe add in a list of prepopulated cities?
+
+4. Get a cool title / font
+
+5. Reorder the charts
+
+6. Can you add more features to the charts? Check the documentation.
+6a. Maybe make the "average" feature more obvious
+6b. Divide the charts into days maybe somehow? Or at least things of Fie
+
+7. Add a "max-width" to the chart. Also make all this responsive!
+
+8. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
+
+9. Add in all your cool WebPack stuff...
+
+10. package.json editing
+
+11. Other things!!!
