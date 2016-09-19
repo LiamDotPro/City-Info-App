@@ -19,7 +19,7 @@ class WeatherList extends Component {
             <tr key={cityData.city.name}>
                 <td className="GMap"><GMap lon={lon} lat={lat}/></td>
                 <td className="spark">
-                    <SparkChart data={temps} color="green" units="K"/>
+                    <SparkChart data={temps} units="K" color="green"/>
                 </td>
 
                 <td className="spark">
