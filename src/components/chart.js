@@ -16,7 +16,7 @@ export default class SparkChart extends Component {
 
         return (
             <div>
-            <Sparklines height={80} width={120} data={this.props.data}>
+            <Sparklines width={120} height={80} data={this.props.data}>
                 <SparklinesLine color={this.props.color}/>
                 <SparklinesReferenceLine type="avg"/>
             </Sparklines>
