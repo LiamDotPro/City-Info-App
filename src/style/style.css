@@ -1,0 +1,32 @@
+body {
+    background: #E4E4E4 url(https://raw.github.com/subtlepatterns/SubtlePatterns/master/tiny_grid.png) repeat;
+}
+
+td.Gmap {
+    padding-top: 0px !important;
+}
+
+
+.input-group {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(129, 138, 145, 0.35) !important;
+}
+
+th {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+td {
+    width: 235px;
+    height: 160px;
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+
+

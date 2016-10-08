@@ -1,23 +1,18 @@
-1. remove constants from actions
+1. remove constants from actions??
 
 2. convert celcius to farenheight
 
 3. maybe add in a list of prepopulated cities?
+Create a reducer that fires when the page loads that pulls in multiple cities
 
-4. Get a cool title / font
+4. A way to delete cities? Maybe just double click? Yes! Also edit the placeholder with instructions?
 
-5. Reorder the charts
+5. Responsive Title (just reduce font). Also hide a column on smaller devices.
 
-6. Can you add more features to the charts? Check the documentation.
-6a. Maybe make the "average" feature more obvious
-6b. Divide the charts into days maybe somehow? Or at least things of Fie
+6. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
 
-7. Add a "max-width" to the chart. Also make all this responsive!
+7. Testing
 
-8. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
+8. Clean up file directory / webpack / package.json
 
-9. Add in all your cool WebPack stuff...
-
-10. package.json editing
-
-11. Other things!!!
+9. Deploy :)

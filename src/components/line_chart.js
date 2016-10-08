@@ -1,6 +1,6 @@
 import _ from 'lodash'; // using the underscore is just a convention for lodash
 import React, {Component} from 'react';
-import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
+import { Sparklines, SparklinesLine, SparklinesReferenceLine, SparklinesBars } from 'react-sparklines';
 
 
 function average(data){
@@ -9,7 +9,7 @@ function average(data){
 
 
 // convert this data!
-export default class SparkChart extends Component {
+export default class SparkLineChart extends Component {
 
 
     render() {

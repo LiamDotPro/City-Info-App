@@ -32,15 +32,6 @@ module.exports = {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('style', 'css', 'resolve-url', 'sass')
     },
-      
-    {
-      test: /\.woff$/,
-      loader: 'url?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]'
-    },
-      
-    { test: /\.[ot]tf$/,
-      loader: 'url?limit=65000&mimetype=application/octet-stream&name=fonts/[name].[ext]'
-    },
 
 
     ]
