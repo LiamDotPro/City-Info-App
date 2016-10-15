@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchWeather } from '../actions/index';
+import { fetchWeather, fetchWeatherAll } from '../actions/index';
 
 
 class SearchBar extends Component {
@@ -9,18 +9,20 @@ class SearchBar extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = { searchTerm : ''};
-
         this.onInputChange = this.onInputChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
 
     }
-
+    
+    componentDidMount() {
+        this.props.fetchWeatherAll();
+    }
+    
+    
     onInputChange(event) {
         console.log(event.target.value);
         this.setState({searchTerm: event.target.value});
-
     }
 
 
@@ -50,7 +52,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators( {fetchWeather} , dispatch);
+    return bindActionCreators( {fetchWeather, fetchWeatherAll} , dispatch);
 }
 
 // Null is used because Redux expects the first parameter to be the state

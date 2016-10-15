@@ -13,12 +13,10 @@ class WeatherList extends Component {
         const pressures = cityData.list.map(weather => weather.main.pressure )
         const humidities = cityData.list.map(weather => weather.main.humidity )
 
-        console.log(temps);
-
 
         return (
             <tr key={cityData.city.name}>
-                <td className="GMap"><GMap lon={lon} lat={lat}/></td>
+                <td className="GMap"><GMap lon={lon - .0035} lat={lat}/></td>
                 <td className="spark">
                     <SparkLineChart data={temps} units="K" color="green"/>
                 </td>

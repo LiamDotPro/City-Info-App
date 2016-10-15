@@ -55,6 +55,7 @@ module.exports = {
 	
 	plugins: [
 	new HtmlWebpackPlugin({
+			title: 'City Info App',
 			inject: 'body',
 		}),
 	new webpack.ProvidePlugin({

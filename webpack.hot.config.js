@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	
@@ -62,7 +63,15 @@ module.exports = {
 	devServer: {
 		historyApiFallback: true,
 		contentBase: './'
-	}
+	},
+	
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: 'City Info App',
+			inject: 'body',
+		}),
+	  ]
+	
 	
 	
 };
