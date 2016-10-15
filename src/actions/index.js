@@ -16,5 +16,17 @@ export function fetchWeather(city) {
     }
 }
 
+//
+export function fetchWeatherAll(city) {
+    const url = `${MAIN_URL}&q=${city},us`;
+    const data = axios.get(url);
+    
+    
+    return {
+        type: 'FETCH_WEATHER',
+        payload: data
+    }
+}
+
 
 //http://api.openweathermap.org/data/2.5/forecast?appid=9008b86fd96369cc36cdc4a509540e10&q=cleveland,us
