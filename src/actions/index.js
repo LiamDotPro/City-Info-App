@@ -14,7 +14,6 @@ export function fetchWeather(city) {
     }
 }
 
-
 export function fetchWeatherAll() {
     var MAIN_URL2 = MAIN_URL;
     function getCity1() {
@@ -40,10 +39,19 @@ export function fetchWeatherAll() {
           return data;
       });
     
-    console.log(requests);
     return {
         type: 'FETCH_WEATHER_ALL',
         payload: requests
+    }
+}
+
+export function deleteCityInfo(idx){
+    
+    console.log(idx);
+    
+    return {
+        type: 'DELETE_CITY',
+        payload: idx
     }
 }
 

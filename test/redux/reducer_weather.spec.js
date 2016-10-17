@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import reducer from '../src/reducers/reducer_weather.js';
+import reducer from '../../src/reducers/reducer_weather.js';
 
 describe('Weather Reducer', () => {
 	it('shoulder return a single weather source', () => {

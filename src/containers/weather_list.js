@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import SparkLineChart from '../components/line_chart';
 import SparkBarChart from '../components/bar_chart';
 import GMap from '../components/map';
+import { deleteCityInfo } from '../actions/index';
 
 class WeatherList extends Component {
-
-    renderWeather(cityData) {
+    
+    constructor(props) {
+        super(props);
+        this.handleDoubleClick = this.handleDoubleClick.bind(this);
+    }
+    
+    handleDoubleClick(...args) {
+        this.props.deleteCityInfo(args[0]);
+    }
+    
+    convertTemp(weather) {
+        return Math.floor(weather.main.temp * (9/5) - 459.67);
+    }
+    
+    renderWeather(cityData, idx) {
         const lon = cityData.city.coord.lon;
         const lat = cityData.city.coord.lat;
-        const temps = cityData.list.map(weather => weather.main.temp ) //convert this from Kelvin to Farenheit
-        const pressures = cityData.list.map(weather => weather.main.pressure )
-        const humidities = cityData.list.map(weather => weather.main.humidity )
-
-
+        const temps = cityData.list.map(this.convertTemp); //convert this from Kelvin to Farenheit
+        const pressures = cityData.list.map(weather => weather.main.pressure );
+        const humidities = cityData.list.map(weather => weather.main.humidity );
         return (
-            <tr key={cityData.city.name}>
+            <tr onDoubleClick={this.handleDoubleClick.bind(undefined, idx)} key={cityData.city.name}>
                 <td className="GMap"><GMap lon={lon - .0035} lat={lat}/></td>
                 <td className="spark">
-                    <SparkLineChart data={temps} units="K" color="green"/>
+                    <SparkLineChart data={temps} units="F°" color="green"/>
                 </td>
 
                 <td className="spark">
@@ -32,7 +45,7 @@ class WeatherList extends Component {
             </tr>
         );
     }
-
+    
     render() {
         return (
           
@@ -49,19 +62,24 @@ class WeatherList extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {this.props.weather.map(this.renderWeather)}
+                {this.props.weather.map(this.renderWeather.bind(this))}
                 </tbody>
             </table>
 
         );
     }
-
-
+    
 }
 
 function mapStateToProps(state){
-    return {weather: state.weather};
+    return {
+        weather: state.weather
+    };
 }
 
-export default connect(mapStateToProps)(WeatherList);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators( {deleteCityInfo} , dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WeatherList);
 

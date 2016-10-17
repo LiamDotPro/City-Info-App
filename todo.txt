@@ -1,14 +1,10 @@
-1. convert celcius to farenheight
+7. Testing - Components and Actions
 
-2. A way to delete cities? Maybe just double click? Yes! Also edit the placeholder with instructions?
+8. Clean up directory structure / webpack / package.json
 
 3. Responsive Table (like just hide a column)
 
 6. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
-
-7. Testing - Components and Actions
-
-8. Clean up directory structure / webpack / package.json
 
 8.5. Figure out how to hide API key based on Heroku or Elastic Beanstalk
 9. Deploy to Elastic Beanstalk :)

@@ -21,7 +21,7 @@ export default class SparkLineChart extends Component {
                 <SparklinesReferenceLine type="avg"/>
             </Sparklines>
 
-            <div>{average(this.props.data)} {this.props.units}</div>
+            <div>Avg: {average(this.props.data)} {this.props.units}</div>
             </div>
         );
     }
