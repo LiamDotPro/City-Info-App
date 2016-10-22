@@ -13,7 +13,6 @@ describe('Weather Reducer', () => {
 		};
 	
 		const newState = reducer(initialState, fetchWeather);
-		console.warn(newState);
 		expect(newState).to.eql(
 			['weather test data']
 		);

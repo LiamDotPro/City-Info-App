@@ -29,7 +29,7 @@ class WeatherList extends Component {
         const humidities = cityData.list.map(weather => weather.main.humidity );
         return (
             <tr onDoubleClick={this.handleDoubleClick.bind(undefined, idx)} key={cityData.city.name}>
-                <td className="GMap"><GMap lon={lon - .0035} lat={lat}/></td>
+                <GMap lon={lon - .0035} lat={lat}/>
                 <td className="spark">
                     <SparkLineChart data={temps} units="F°" color="green"/>
                 </td>
@@ -55,9 +55,9 @@ class WeatherList extends Component {
                 <tr style={{textAlign: "center"}}>
                     <th>City</th>
 
-                    <th>Temperature (K)</th>
-                    <th>Pressue (hPA)</th>
-                    <th>Humdity (%)</th>
+                    <th className="tempAvg">Temperature (K)</th>
+                    <th className="hidden-xs-1">Pressue (hPA)</th>
+                    <th className="hidden-xs-1">Humdity (%)</th>
 
                 </tr>
                 </thead>

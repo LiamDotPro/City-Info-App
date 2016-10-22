@@ -13,9 +13,15 @@ export default class SparkLineChart extends Component {
 
 
     render() {
+        var mobileClass;
+        if (this.props.units == "hPA") {
+            mobileClass = "hidden-xs-1";
+        } else {
+            mobileClass = "tempAvg";
+        }
 
         return (
-            <div>
+            <div className={mobileClass}>
             <Sparklines width={120} height={80} data={this.props.data}>
                 <SparklinesLine color={this.props.color}/>
                 <SparklinesReferenceLine type="avg"/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import chai, {expect} from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import SearchBar from '../../src/containers/search_bar';
@@ -12,11 +12,11 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 describe('<SearchBar/>', () => {
 	
-	describe('These tests blahblahblah', function (done) {
+	describe('Tests to see if the <SearchBar/> sets up correctly', function (done) {
 		
 		var wrapper;
 		before((done) => {
-			wrapper = mount(
+			wrapper = shallow(
 			  <Provider store={createStoreWithMiddleware(reducers)}>
 				  <SearchBar />
 			  </Provider>
@@ -25,8 +25,9 @@ describe('<SearchBar/>', () => {
 		});
 		
 		
-		it('should do something', function (done) {
-			expect(wrapper.find('.board-creator')).to.exist;
+		it('The state value searchTerm should be able to be set to \"surfing\"', function (done) {
+			wrapper.setState({searchTerm: 'surfing'});
+			expect(wrapper.state().searchTerm).to.equal('surfing');
 			done();
 		});
 		

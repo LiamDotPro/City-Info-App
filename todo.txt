@@ -1,4 +1,7 @@
 7. Testing - Components and Actions
+7a. Copy tests from Rogue regarding actions and test that
+7b. Finish tests for WeatherList
+7c. Look into testing line chart, bar chart, and map
 
 8. Clean up directory structure / webpack / package.json
 

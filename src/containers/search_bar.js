@@ -21,7 +21,6 @@ class SearchBar extends Component {
     
     
     onInputChange(event) {
-        console.log(event.target.value);
         this.setState({searchTerm: event.target.value});
     }
 
@@ -35,13 +34,15 @@ class SearchBar extends Component {
     }
 
     render() {
+        var place = "Get a five-day forecast in your favorite cities  |  Double click to delete a city";
         return (
             <form onSubmit = {this.onFormSubmit} className = "input-group">
                 <input
-                placeholder = "Get a five-day forecast in your favorite cities  |  Double click to delete a city"
-                className = "form-control"
-                value = {this.state.searchTerm}
-                onChange = {this.onInputChange}
+                  type="text"
+                placeholder={place}
+                className="form-control"
+                value={this.state.searchTerm}
+                onChange={this.onInputChange}
                 />
                 <span className = "input-group-btn">
                 <button type="submit" className="btn btn-secondary">Submit</button>

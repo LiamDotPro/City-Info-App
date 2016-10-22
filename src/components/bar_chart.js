@@ -15,13 +15,13 @@ export default class SparkBarChart extends Component {
 	render() {
 		
 		return (
-		  <div>
+		  <div className="hidden-xs-1">
 			  <Sparklines width={120} height={80} data={this.props.data}>
 				  <SparklinesBars color={this.props.color}/>
 				  <SparklinesReferenceLine type="avg"/>
 			  </Sparklines>
 			  
-			  <div>{average(this.props.data)} {this.props.units}</div>
+			  <div>Avg: {average(this.props.data)} {this.props.units}</div>
 		  </div>
 		);
 	}
