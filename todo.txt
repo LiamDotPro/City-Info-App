@@ -3,9 +3,7 @@
 7b. Finish tests for WeatherList
 7c. Look into testing line chart, bar chart, and map
 
-8. Clean up directory structure / webpack / package.json
-
-3. Responsive Table (like just hide a column)
+8. Clean up package.json
 
 6. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
 

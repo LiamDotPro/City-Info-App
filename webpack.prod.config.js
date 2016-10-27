@@ -3,18 +3,22 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 
 module.exports = {
+	
   entry: [
-    './src/index.js'
+    './src/index.js',
   ],
+	
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'build.min.js'
   },
-  devtool: 'sourcemap',
+  devtool: 'source-map',
   module: {
+    
     loaders: [{
       exclude: /node_modules/,
       loader: 'babel',
@@ -25,29 +29,28 @@ module.exports = {
   
     {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css')
-    },
+      loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+    }
       
-    {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style', 'css', 'resolve-url', 'sass')
-    },
-
-
     ]
   },
+	
+	postcss: [
+		autoprefixer({ browsers: ['last 2 versions'] })
+	],
+	
+	resolve: {
+		extensions: ['', '.js', '.jsx','.css']
+	},
   
- 
   plugins: [
     new HtmlWebpackPlugin({
       title: 'City Info App',
       inject: 'body',
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new ExtractTextPlugin("style.css")
+    new ExtractTextPlugin("style.css"),
+	new webpack.ProvidePlugin({
+	  "React": "react",
+	})
   ]
 };

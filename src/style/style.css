@@ -6,7 +6,6 @@ td.Gmap {
     padding-top: 0px !important;
 }
 
-
 .input-group {
     margin-top: 25px;
     margin-bottom: 15px;
@@ -43,13 +42,9 @@ td.GMap {
 
 }
 
-
-
-
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px) {
-
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
 
     .hidden-xs-1 {
         visibility: collapse;

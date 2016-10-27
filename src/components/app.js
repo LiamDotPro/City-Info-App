@@ -5,16 +5,15 @@ import Title from './title';
 
 export default class App extends Component {
 
-
   render() {
     return (
-        <div>
-        <Title/>
+      <div>
+        <Title />
         <div className="container">
-        <SearchBar/>
-        <WeatherList/>
+          <SearchBar />
+          <WeatherList />
         </div>
-        </div>
-    );
+      </div>
+        );
   }
 }
