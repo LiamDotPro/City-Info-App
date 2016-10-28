@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/danielehrlich/Youtube-Search-App.svg?branch=master)](https://travis-ci.org/danielehrlich/Youtube-Search-App)
  ![Heroku](http://heroku-badge.herokuapp.com/?app=youtube%2Dsearch%2Dapp&style=flat&svg=1) [![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://registry.hub.docker.com/u/danora/youtube-search-app/)
 
-![City Info App Screenshot](https://www.dropbox.com/s/97yej95q6ystm81/City-Info-App-Screenshot.png?raw=1)
+![City Info App Screenshot](https://www.dropbox.com/s/gyu37qy0xgtvb6h/City-Info-App-Screenshot.png?raw=1)
 
 # City Info App
 
