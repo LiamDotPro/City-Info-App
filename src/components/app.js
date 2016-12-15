@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SearchBar from '../containers/search_bar';
 import WeatherList from '../containers/weather_list';
 import Title from './title';
 
 export default class App extends Component {
-
+  
   render() {
     return (
       <div>
@@ -14,6 +14,6 @@ export default class App extends Component {
           <WeatherList />
         </div>
       </div>
-        );
+    );
   }
 }

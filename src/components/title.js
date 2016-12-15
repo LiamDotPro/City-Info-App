@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+
 
 class Title extends Component {
-
+  
   render() {
     return (
       <div>
@@ -13,8 +14,9 @@ class Title extends Component {
           </li>
         </ul>
       </div>
-        );
+    );
   }
 }
+
 
 export default Title;

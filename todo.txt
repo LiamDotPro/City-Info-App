@@ -5,7 +5,6 @@
 
 8. Clean up package.json
 
-6. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
+9. Maybe bring in a flight delay thing: http://services.faa.gov/docs/services/airport/
 
-8.5. Figure out how to hide API key based on Heroku or Elastic Beanstalk
-9. Deploy to Elastic Beanstalk :)
+10.5. API Key things

@@ -1,4 +1,6 @@
+
 export default function (state = [], action) {
+  
   switch (action.type) {
     case 'FETCH_WEATHER':
       return [action.payload.data, ...state];
@@ -7,8 +9,6 @@ export default function (state = [], action) {
     case 'DELETE_CITY':
       return [...state.slice(0, action.payload), ...state.slice(action.payload + 1)];
   }
-
-
+  
   return state;
 }
-
