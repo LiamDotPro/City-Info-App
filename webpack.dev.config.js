@@ -1,3 +1,4 @@
+const config = require('./src/config/config.js');
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
@@ -58,6 +59,9 @@ module.exports = {
 			title: 'City Info App',
 			inject: 'body',
 		}),
+  new webpack.DefinePlugin({
+    'process.env.WEATHERAPI': JSON.stringify(config.API_KEY)
+  }),
 	new webpack.ProvidePlugin({
 		"React": "react",
 	}),

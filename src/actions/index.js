@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = process.env.WEATHERAPI || import {API_KEY} from ../config/API_KEY.js;
+const API_KEY = process.env.WEATHERAPI;
 const MAIN_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 

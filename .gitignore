@@ -7,4 +7,6 @@ npm-debug.log
 /.idea
 
 #API
-/src/config/API_KEY.js
+.env
+/src/config
+/src/config/config.js
