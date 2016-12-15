@@ -12,11 +12,11 @@ module.exports = {
   ],
   
   output : {
-    path    : path.join(__dirname, 'build'),
+    path : path.join(__dirname, './build'),
     filename: 'build.min.js'
   },
   
-  devtool: 'source-map',
+  devtool: '#sourcemap',
   
   module : {
     loaders: [{
@@ -51,9 +51,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.WEATHERAPI': JSON.stringify(process.env.WEATHERAPI || 'development')
     }),
-    new ExtractTextPlugin("style.css"),
-    new webpack.ProvidePlugin({
-      "React": "react",
-    })
+    new ExtractTextPlugin("style.css")
   ]
 };
