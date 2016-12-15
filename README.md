@@ -3,7 +3,7 @@
 
 # City Info App
 
-1. Utilizes React, the Youtube Node API, and lodash
+1. [TO DO]
 2. The completed and compiled product is available in /Build.
 
 ##  Built With:
